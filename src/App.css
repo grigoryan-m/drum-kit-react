@@ -1,0 +1,20 @@
+*{
+  overflow: hidden;
+}
+.Wrapper{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Panel{
+  min-width: 60vw;
+  max-width: 90vw;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
