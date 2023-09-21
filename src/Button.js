@@ -5,13 +5,19 @@ function Button(props){
     useEffect(() => {
         document.addEventListener("keypress", (event)=>{
             if(event.key.toLowerCase() === props.hotkey){
-                document.innerHTML = "a";
+                playSound();
             }
         })
     });
 
+    let audio;
+    const playSound = () => {
+        audio = new Audio(`/audio/${props.title}.wav`);
+        audio.play();
+	}
+
     return(
-        <button>
+        <button onClick={playSound}>
             <p className='buttonTitle'>{props.hotkey.toUpperCase()}</p>
             <p className='buttonDescription'>{props.title}</p>
         </button>
